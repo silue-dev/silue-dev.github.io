@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url('background2.png') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */ 
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; 
+    position: relative;
+}
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+#dynamic-text {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: white;
+}
+
+.social-links a i {
+    font-size: 1.75rem;
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover i {
+    color: orange;
+}
+
+.cursor {
+    font-weight: bold;
+    color: orange;
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    #dynamic-text {
+        font-size: 1.15rem;
+    }
+
+    .social-links a i {
+        font-size: 1.25rem;
+    }
+}
