@@ -40,8 +40,8 @@ function loop() {
         }
     }
     const spedUp = 30;
-    const normalSpeed = 90;
-    const time = isEnd ? 3500 : isDeleting ? spedUp : normalSpeed;
+    const normalSpeed = 100;
+    const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
     setTimeout(loop, time);
 }
 
